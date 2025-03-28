@@ -168,6 +168,7 @@ class MainActivity : AppCompatActivity() {
                 if (imageFile.exists()) {
                     val bitmap = BitmapFactory.decodeFile(imagePath)
                     binding.imageViewMeter.setImageBitmap(bitmap)
+                    Log.e(TAG, "Image file Loaded: $imagePath")
                 } else {
                     Log.e(TAG, "Image file does not exist: $imagePath")
                     binding.imageViewMeter.setImageResource(R.drawable.ic_menu_report_image)
